@@ -1,7 +1,12 @@
 name: run
 
-on: [push]
-
+on: 
+  push:
+    branches: 
+      - main
+  schedule:
+      - cron: "30 2 * * *"
+    
 jobs:
   build-linux:
     runs-on: ubuntu-latest
