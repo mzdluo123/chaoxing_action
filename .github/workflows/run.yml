@@ -1,0 +1,28 @@
+name: run
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip3 install -r requirements.txt
+    - name: Run sign
+      env:
+        USER: ${{ secrets.USER }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        SECRET:  ${{ secrets.SECRET }}
+        RUN_TIME: ${{ secrets.RUNTIME }}
+        LATITUDE:  ${{ secrets.LATITUDE }}
+        LONGITUDE: ${{ secrets.LONGITUDE }}
+      run: |
+        python3 local_sign.py
+
