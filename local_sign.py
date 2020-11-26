@@ -417,6 +417,7 @@ def local_run():
 
 
 if __name__ == '__main__':
+    print("start sign.....")
     for i in range(RUN_TIME):
         local_run()
         time.sleep(60)
