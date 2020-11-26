@@ -15,6 +15,9 @@ SERVER_CHAN = {
     'url': 'https://sc.ftqq.com/{}.send'.format(SERVER_CHAN_SCKEY)
 }
 
+# 当到达时间持续轮询签到任务的时间
+RUN_TIME = int(os.getenv("RUN_TIME"))
+
 # 学习通账号cookies缓存文件路径
 COOKIES_PATH = "./"
 COOKIES_FILE_PATH = COOKIES_PATH + "cookies.json"

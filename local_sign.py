@@ -8,7 +8,6 @@ import random
 import requests
 from lxml import etree
 from bs4 import BeautifulSoup
-from apscheduler.schedulers.blocking import BlockingScheduler
 requests.packages.urllib3.disable_warnings()
 from config import *
 
@@ -418,7 +417,6 @@ def local_run():
 
 
 if __name__ == '__main__':
-    scheduler = BlockingScheduler()
-    scheduler.add_job(local_run, 'interval', hours=i_hours, minutes=i_minutes, seconds=i_seconds)
-    print('已开启定时执行,每间隔[{}时{}分{}秒]执行一次签到任务'.format(i_hours, i_minutes, i_seconds))
-    scheduler.start()
+    for i in range(RUN_TIME):
+        local_run()
+        time.sleep(60)
