@@ -1,6 +1,8 @@
 # chaoxing_action
 使用Github Action自动完成学习通签到
 
+不过目前好像还有一些问题
+
 # 食用方法 
 
 fork本仓库，在GitHub对应仓库中添加以下Secret值:
