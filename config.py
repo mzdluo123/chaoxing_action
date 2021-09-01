@@ -3,8 +3,8 @@ import os
 
 # 学习通账号密码
 USER_INFO = {
-    'username': os.getenv("USER"),
-    'password': os.getenv("PASSWORD"),
+    'username': os.getenv("18137937929"),
+    'password': os.getenv("suyihua148"),
     'schoolid': ''  # 学号登录才需要填写
 }
 
@@ -30,8 +30,8 @@ ACTIVEID_FILE_PATH = ACTIVEID_PATH + "activeid.json"
 IMAGE_PATH = "./image/"
 
 # 位置信息
-latitude = os.getenv("LATITUDE")
-longitude = os.getenv("LONGITUDE")
+latitude = os.getenv("112.4289625")
+longitude = os.getenv("34.6195532")
 
 # ip地址
 clientip = "0.0.0.0"
